@@ -2,9 +2,7 @@
 
 ## How to compile and execute using GNU Compiler Collection (gcc)
 
-Basic compile: 
-
-	gcc programsource.c -o executable.out
+	Basic compile: gcc programsource.c -o executable.out
 
 Execute the program: 
 
@@ -12,9 +10,7 @@ Execute the program:
 
 ## Escape sequences
 
-Newline character: 
-
-	\n
+	Newline character: \n
 
 Tab character: 
 
