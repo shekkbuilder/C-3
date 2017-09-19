@@ -6,16 +6,30 @@ Basic compile:
 
 	gcc programsource.c -o executable.out
 
-Execute the program: <b>executable.out
+Execute the program: 
+
+	executable.out
 
 ## Escape sequences
 
-Newline character: \n
+Newline character: 
 
-Tab character: \t
+	\n
 
-Backspace character: \b
+Tab character: 
 
-Double-quote character: \"
+	\t
 
-Backlash character: \\
+Backspace character: 
+
+	\b
+
+Double-quote character: 
+
+	\"
+
+Backlash character: 
+
+	\\
+
+

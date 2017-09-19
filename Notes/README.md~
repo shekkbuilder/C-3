@@ -2,9 +2,11 @@
 
 ## How to compile and execute using GNU Compiler Collection (gcc)
 
-Basic compile: gcc programsource.c -o executable.out
+Basic compile: 
 
-Execute the program: executable.out
+	gcc programsource.c -o executable.out
+
+Execute the program: <b>executable.out
 
 ## Escape sequences
 
