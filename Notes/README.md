@@ -6,19 +6,8 @@
 
 	Execute the program: executable.out
 
-## Escape sequences
 
-	Newline character: \n
-
-	Tab character: \t
-
-	Backspace character: \b
-
-	Double-quote character: \"
-
-	Backlash character: \\
-
-## printf()
+## Printing output
 
 printf() is a C library general-purpose function that sends formatted output. The first argument is usually a string of characters that begin with % to indicate what type of output will be printed from the second argument. Here are a few different outputs used:
 
@@ -32,3 +21,19 @@ printf() is a C library general-purpose function that sends formatted output. Th
 	%o	// Octal.
 	%x	// Hexadecimal.  
 
+
+## Escape sequences
+
+	Newline character: \n
+
+	Tab character: \t
+
+	Backspace character: \b
+
+	Double-quote character: \"
+
+	Backlash character: \\
+
+## Working with input
+
+scanf() is a C library function that allows a program to get data from the user. Like printf() it has a set of arguments for formatting and a second set for the values. The second group of arguments for scanf often include an ampersand symbol because they refer to pointers and not an actual location.  
