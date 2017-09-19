@@ -1,3 +1,5 @@
+// Example of how to use a break statement.
+
 for (int counter = 1; counter <= 10; counter++)
 	{
 		if (counter == 5)

@@ -1,3 +1,5 @@
+//	Example of how to use a conditional expression
+
 int result;
 
 result = (a >= b) ? a : b;
