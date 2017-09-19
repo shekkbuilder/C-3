@@ -2,18 +2,18 @@
 
 ## How to compile and execute using GNU Compiler Collection (gcc)
 
-Basic compile: <b>gcc programsource.c -o executable.out</b>
+Basic compile: gcc programsource.c -o executable.out
 
-Execute the program: <b>executable.out</b>
+Execute the program: executable.out
 
 ## Escape sequences
 
-Newline character: <b>\n</b>
+Newline character: \n
 
-Tab character: <b>\t</b>
+Tab character: \t
 
-Backspace character: <b>\b</b>
+Backspace character: \b
 
-Double-quote character: <b>\"</b>
+Double-quote character: \"
 
-Backlash character: <b>\\</b>
+Backlash character: \\
