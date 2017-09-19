@@ -4,28 +4,17 @@
 
 	Basic compile: gcc programsource.c -o executable.out
 
-Execute the program: 
-
-	executable.out
+	Execute the program: executable.out
 
 ## Escape sequences
 
 	Newline character: \n
 
-Tab character: 
+	Tab character: \t
 
-	\t
+	Backspace character: \b
 
-Backspace character: 
+	Double-quote character: \"
 
-	\b
-
-Double-quote character: 
-
-	\"
-
-Backlash character: 
-
-	\\
-
+	Backlash character: \\
 
