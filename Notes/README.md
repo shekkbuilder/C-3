@@ -36,4 +36,14 @@ printf() is a C library general-purpose function that sends formatted output. Th
 
 ## Working with input
 
-scanf() is a C library function that allows a program to get data from the user. Like printf() it has a set of arguments for formatting and a second set for the values. The second group of arguments for scanf often include an ampersand symbol because they refer to pointers and not an actual location.  
+scanf() is a C library function that allows a program to get data from the user. Like printf() it has a set of arguments for formatting and a second set for the values. The second group of arguments for scanf often include an ampersand symbol because they refer to pointers and not an actual location.
+
+## Pointers
+
+A pointer is a variable that "points" to the memory address of another variable. It's value is the address to the other variable. Pointers are defined like a normal variable except the ampersand symbol * is added before the pointers name like:
+
+	int *pointer_variable = 5;
+
+The statement above means the value that is in the memory address pointed to by <b>pointer_variable</b> is equal to 5.
+
+
