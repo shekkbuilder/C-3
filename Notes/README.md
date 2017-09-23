@@ -69,14 +69,4 @@ If you tried to change the value with the statement:
 
 It would not make sense. The statement would mean that the memory address for <b>pointer_var</b> is 10.
 
-## Arrays
-
-### How to create an array
-
-	int arrayOne[4];	// create array with 4 elements
-
-	int arrayTwo[] = {54, 21, 89, 125, 3};	// create and populate array
-
-	arrayOne[0] = 20;	// assigns 20 to index 0 of arrayOne
-
 
