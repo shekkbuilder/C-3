@@ -1,11 +1,18 @@
-# Notes
+# C Notes
 
-## How to compile and execute using GNU Compiler Collection (gcc)
+## Compilation
+
+### How to compile and execute using GNU Compiler Collection (gcc)
 
 	Basic compile: gcc programsource.c -o executable.out
 
 	Execute the program: executable.out
 
+### How to compile on Windows using Developer Command Prompt
+
+Open Developer Command Prompt for Visual Studio and cd to the directory containing the source file. Enter <b>cl programsource.c</b>
+
+You can use /out:executable.exe to name the executable file. Otherwise the file name will be the same as the source file.
 
 ## Printing output
 
@@ -27,7 +34,6 @@ Here are a few different outputs used:
 	%p	// Pointer.
 	%o	// Octal.
 	%x	// Hexadecimal.  
-
 
 ### Escape sequences
 
