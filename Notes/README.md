@@ -78,3 +78,13 @@ It would not make sense. The statement would mean that the memory address for <b
 	int arrayTwo[] = {54, 21, 89, 125, 3};	// create and populate array
 
 	arrayOne[0] = 20;	// assigns 20 to index 0 of arrayOne
+
+### Create, populate, and print an array with a loop
+
+	int array[5];
+
+    for (int i = 0; i < 5; i++)
+    {
+        array[i] = i + 1;  // populate elements
+        printf("Index %d: %d\n", i, array[i]);  // print elements
+    }
