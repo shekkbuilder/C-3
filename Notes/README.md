@@ -110,7 +110,7 @@ For those two variables <b>intVar</b> is the value while <b>&intVar</b> is the m
 
 	elements = sizeof(my_array) / sizeof(int);
 
-### Passing as a pointer to a function
+### Passing to a function
 
 You can not pass an array as a parameter in a function. You have to pass it as a pointer. The name of an array without the [] is the address of the first element in the array.
 
