@@ -106,6 +106,30 @@ For those two variables <b>intVar</b> is the value while <b>&intVar</b> is the m
         printf("Index %d: %d\n", i, array[i]);  // print elements
     }
 
+### To determine how many elements are in an array we can use the sizeof() function:
+
+	elements = sizeof(my_array) / sizeof(int);
+
+### Passing as a pointer to a function
+
+You can not pass an array as a parameter in a function. You have to pass it as a pointer. The name of an array without the [] is the address of the first element in the array.
+
+In a function, you pass the address of the array like:
+
+	int my_array[5];
+
+	// pass the address of the array to the function like:
+	function(my_array);
+
+	// or
+	function(&my_array[0]);
+
+	// function being called
+	int function(int the_array[])
+	{
+		// function code here
+	}
+
 ### Declare a multidimensional array
 
 	char names[12][25];
@@ -113,6 +137,19 @@ For those two variables <b>intVar</b> is the value while <b>&intVar</b> is the m
 ## Strings
 
 A string in C is an array of characters that end with a null (\0). C doesn't have a built in data type for strings but it has a library for working with and manipulating strings called <b><string.h></b>.
+
+	my_name[] = {“Jae Logan”};	// will have a size of 10 elements number 0 – 9.
+
+	my_name[0] = ‘J’; 
+	my_name[1] = ‘a’; 
+	my_name[2] = ‘e’; 
+	my_name[3] = ‘ ’;
+	my_name[4] = ‘L’; 
+	my_name[5] = ‘o’; 
+	my_name[6] = ‘g’; 
+	my_name[7] = ‘a’;
+	my_name[8] = ‘n’;
+	my_name[9] = ‘\0’;
 
 ### Create and print string using character array.
 
