@@ -69,6 +69,23 @@ If you tried to change the value with the statement:
 
 It would not make sense. The statement would mean that the memory address for <b>pointer_var</b> is 10.
 
+### Example
+
+Initialize a pointer with another variable's memory address
+
+	int intVar = 25;
+	int *ptrVar;
+
+	ptrVar = &intVar;	// ptrVar now points to same memory location of intVar which contains 25
+
+	*ptrVar = intVar;	// passing the value 25 from intVar to ptrVar
+	
+	*ptrVar = 50;	// changing ptrVar value to 50
+
+	// ptr = 100;  doesn't work; like trying to set the memory address to 100
+
+For those two variables <b>intVar</b> is the value while <b>&intVar</b> is the memory address of the value. <b>*ptrVar</b> is the value while <b>ptrVar</b> is the memory address of the value.
+
 ## Arrays
 
 ### How to create an array
@@ -88,6 +105,10 @@ It would not make sense. The statement would mean that the memory address for <b
         array[i] = i + 1;  // populate elements
         printf("Index %d: %d\n", i, array[i]);  // print elements
     }
+
+### Declare a multidimensional array
+
+	char names[12][25];
 
 ## Strings
 
