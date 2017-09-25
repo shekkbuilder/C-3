@@ -23,29 +23,29 @@ Example:
 	printf("Hello World!\n");
 	printf("%d\t%s\n", int_var, str_var);
 
-Here are a few different outputs used:
+Here are a few different formats for data types used:
 
-	%d	// Prints decimal integer.
-	%6d	// Prints decimal integer of 6 chars.
-	%f	// Prints floating point.
-	%4.2f	// Prints floating point of 4 chars and 2 after decimal.
-	%c	// Prints character.
-	%s	// Prints string.
-	%p	// Pointer.
-	%o	// Octal.
-	%x	// Hexadecimal.  
+<ul>
+	<li>%d - Prints decimal integer.</li>
+	<li>%6d	- Prints decimal integer of 6 chars.</li>
+	<li>%f - Prints floating point.</li>
+	<li>%4.2f - Prints floating point of 4 chars and 2 after decimal.</li>
+	<li>%c - Prints character.</li>
+	<li>%s - Prints string.</li>
+	<li>%p - Pointer.</li>
+	<li>%o - Octal.</li>
+	<li>%x - Hexadecimal.</li>
+</ul>
 
 ### Escape sequences
 
-	Newline character: \n
-
-	Tab character: \t
-
-	Backspace character: \b
-
-	Double-quote character: \"
-
-	Backlash character: \\
+<ul>
+	<li>Newline character: \n</li>
+	<li>Tab character: \t</li>
+	<li>Backspace character: \b</li>
+	<li>Double-quote character: \"</li>
+	<li>Backlash character: \\</li>
+</ul>
 
 ## Working with input
 
@@ -88,3 +88,24 @@ It would not make sense. The statement would mean that the memory address for <b
         array[i] = i + 1;  // populate elements
         printf("Index %d: %d\n", i, array[i]);  // print elements
     }
+
+## Strings
+
+A string in C is an array of characters that end with a null (\0). C doesn't have a built in data type for strings but it has a library for working with and manipulating strings called <b><string.h></b>.
+
+### Create and print string using character array.
+
+	char strArray[] = {"This is my string array."};
+	printf("%s\n", strArray);	// Output: This is my string array.
+
+### Common string functions
+
+<ul>
+	<li><b>strlen()</b> – returns the length of a string</li>
+	<li><b>strcpy()</b> – copies a null terminated string into a variable</li>
+	<li><b>strcat()</b> – concatenates strings</li>
+	<li><b>strcmp()</b> – compares the values of strings</li>
+</ul>
+
+
+
