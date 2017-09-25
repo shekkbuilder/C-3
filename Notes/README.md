@@ -134,6 +134,10 @@ In a function, you pass the address of the array like:
 
 	char names[12][25];
 
+### Declare a 3D array
+
+	char date[100][12][31];
+
 ## Strings
 
 A string in C is an array of characters that end with a null (\0). C doesn't have a built in data type for strings but it has a library for working with and manipulating strings called <b><string.h></b>.
