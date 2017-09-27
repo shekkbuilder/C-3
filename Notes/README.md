@@ -206,8 +206,9 @@ The structure member operator ‘.’ connects the structure name and the member
 
 	printf (“%d, %d”, point.x, point.y)	// prints out x and y members of struct variable point
 
-	/* if declare a variable of struct rectangle called rect_one, a single member of the sub-struct graph_point can be referenced: */
-
+	/* if declare a variable of struct rectangle called rect_one 
+	a single member of the sub-struct graph_point can be referenced: */
+	
 	struct rectangle rect_one;
 	rect_one.a.x;
 
