@@ -212,4 +212,17 @@ The structure member operator ‘.’ connects the structure name and the member
 	struct rectangle rect_one;
 	rect_one.a.x;
 
+### File operations
 
+<ul>
+	<li><b>fopen()</b> – Creates a new file for use or opens a new existing file for use</li>
+	<li><b>fclose()</b> – Closes a file which has been opened for use</li>
+	<li><b>getc()</b> – Reads a character from a file</li>
+	<li><b>putc()</b> – Writes a character to a file</li>
+	<li><b>fprintf()</b> – Writes a set of data values to a file</li>
+	<li><b>fscanf()</b> – Reads a set of data values from a file</li>
+	<li><b>getw()</b> – Reads a integer from a file</li>
+	<li><b>putw()</b> – Writes an integer to the file</li>
+	<li><b>fseek()</b> – Sets the position to a desired point in the file</li>
+	<li><b>ftell()</b> - Gives the current position in the file</li>
+</ul>
