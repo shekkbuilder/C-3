@@ -212,6 +212,8 @@ The structure member operator ‘.’ connects the structure name and the member
 	struct rectangle rect_one;
 	rect_one.a.x;
 
+## Working with files 
+
 ### File operations
 
 <ul>
@@ -226,3 +228,30 @@ The structure member operator ‘.’ connects the structure name and the member
 	<li><b>fseek()</b> – Sets the position to a desired point in the file</li>
 	<li><b>ftell()</b> - Gives the current position in the file</li>
 </ul>
+
+### Open and manipulate a file
+
+	FILE *pointer_to_file
+	pointer_to_file = fopen("filename", "mode");
+
+The FILE statement declares a variable <b>pointer_to_file</b> as a pointer to the datatype FILE
+
+FILE is a structure that has been defined in the stdio.h I/O library.
+
+When opening a file, the filename can consist of any valid Unix filename.
+When we open the file for use, if the file exists it will be re-initialized and the contents lost.
+
+The second statement also specifies the purpose for which the file has been opened. The mode provides this information:
+
+<ul>
+	<li>R - open the file for read only</li>
+	<li>W - open the file for writing only
+	<li>A - open the file to append data</li>
+</ul>
+
+	pointer_to_file = fopen("user_data", "r");
+
+### Close a file
+
+	fclose(pointer_to_file);
+
