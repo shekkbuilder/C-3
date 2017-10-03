@@ -229,7 +229,7 @@ The structure member operator ‘.’ connects the structure name and the member
 	<li><b>ftell()</b> - Gives the current position in the file</li>
 </ul>
 
-### Open and manipulate a file
+### Open a file
 
 	FILE *pointer_to_file
 	pointer_to_file = fopen("filename", "mode");
@@ -249,9 +249,9 @@ The second statement also specifies the purpose for which the file has been open
 	<li>A - open the file to append data</li>
 </ul>
 
-	pointer_to_file = fopen("user_data", "r");
+	pointer_to_file = fopen("user_data", "r");	// opens user_data file for reading
 
 ### Close a file
 
-	fclose(pointer_to_file);
+	fclose(pointer_to_file);	// closes user_data file that argument points to
 
