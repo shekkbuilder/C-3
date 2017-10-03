@@ -255,3 +255,8 @@ The second statement also specifies the purpose for which the file has been open
 
 	fclose(pointer_to_file);	// closes user_data file that argument points to
 
+## Random
+
+getchar is a stdio library function that reads a single character from stdin (standard input)
+
+getchar has no parameters and its sole function is to read the next character as an unsigned char and return its value converted to an integer
