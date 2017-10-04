@@ -244,9 +244,12 @@ When we open the file for use, if the file exists it will be re-initialized and 
 The second statement also specifies the purpose for which the file has been opened. The mode provides this information:
 
 <ul>
-	<li>R - open the file for read only</li>
-	<li>W - open the file for writing only
-	<li>A - open the file to append data</li>
+	<li>r - open the file for read only</li>
+	<li>w - open the file for over write</li>
+	<li>a - open the file for appending</li>
+	<li>r+ - open the file for read and over write data at beginning</li>
+	<li>w+ - open the file for read and over write</li>
+	<li>a+ - open the file for read and appending</li>
 </ul>
 
 	pointer_to_file = fopen("user_data", "r");	// opens user_data file for reading
