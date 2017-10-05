@@ -258,6 +258,39 @@ The structure member operator ‘.’ connects the structure name and the member
 	struct rectangle rect_one;
 	rect_one.a.x;
 
+### Structure scenario example
+
+You run a retail store and want a database of customers. A structure can be used to create a database-like structure for each customer.
+
+	struct customer_db
+	{
+		int account;
+		int balance;
+		char name[40];
+		char address[80];
+		char phone[15];
+	};
+
+Now you can create customer_db type variables:
+
+	customer_db single_cust; 
+	customer_db all_cust[75];
+
+You can also create the variables directly after the structure.
+
+	struct customer_db
+	{
+		int account;
+		int balance;
+		char name[40];
+		char address[80];
+		char phone[15];
+	} single_cust, all_cust;
+
+You can also create a structure type variable and populate it's members like previously:
+
+	customer_db all_cust = {189654, 800, "Tom Joyner", "462 Ridge Street", "756-536-7485"};
+
 ## Random
 
 getchar is a stdio library function that reads a single character from stdin (standard input)
