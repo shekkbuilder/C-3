@@ -6,7 +6,7 @@ struct customer_db
     char name[40];
     char address[80];
     char phone[15];
-}
+};
 
 customer_db customer;   // customer_db structure variable
 
