@@ -169,49 +169,6 @@ A string in C is an array of characters that end with a null (\0). C doesn't hav
 	<li><b>strcmp()</b> – compares the values of strings</li>
 </ul>
 
-## Structures
-
-A structure is a ‘collection’ of one or more variables, potentially of different types that are grouped together for convenience. They contain data that defines a particular set of information. They are similar to rows of a table in a database. 
-
-A structure name and non-structure variable can have the same name. Also member variable names that are the same can exist inside of multiple structures.
-
-### How to create a structure
-
-Use the keyword struct to define. The names of structures are often called structure tags.
-
-	struct graph_point
-	{
-		int x, y;	// members of the structure
-	}
-
-Once the structure has been defined a new variable of the structure type can be created.
-
-	struct graph_point point;	// create variable point with structure members x and y
-	struct graph_point point = {10, 25};	// create variable and populate members
-
-### Nesting structures
-
-It's also possible to nest structures like using two coordinates to construct a rectangle
-
-	struct rectangle
-	{
-		// create members of rectangle struct from nested graph_point struct
-		struct graph_point a;
-		struct graph_point b;
-	};
-
-### Referencing structures
-
-The structure member operator ‘.’ connects the structure name and the member name
-
-	printf (“%d, %d”, point.x, point.y)	// prints out x and y members of struct variable point
-
-	/* if declare a variable of struct rectangle called rect_one 
-	a single member of the sub-struct graph_point can be referenced: */
-	
-	struct rectangle rect_one;
-	rect_one.a.x;
-
 ## Working with files 
 
 ### File operations
@@ -257,6 +214,49 @@ The second statement also specifies the purpose for which the file has been open
 ### Close a file
 
 	fclose(pointer_to_file);	// closes user_data file that argument points to
+
+## Structures
+
+A structure is a ‘collection’ of one or more variables, potentially of different types that are grouped together for convenience. They contain data that defines a particular set of information. They are similar to rows of a table in a database. 
+
+A structure name and non-structure variable can have the same name. Also member variable names that are the same can exist inside of multiple structures.
+
+### How to create a structure
+
+Use the keyword struct to define. The names of structures are often called structure tags.
+
+	struct graph_point
+	{
+		int x, y;	// members of the structure
+	};
+
+Once the structure has been defined a new variable of the structure type can be created.
+
+	struct graph_point point;	// create variable point with structure members x and y
+	struct graph_point point = {10, 25};	// create variable and populate members
+
+### Nesting structures
+
+It's also possible to nest structures like using two coordinates to construct a rectangle
+
+	struct rectangle
+	{
+		// create members of rectangle struct from nested graph_point struct
+		struct graph_point a;
+		struct graph_point b;
+	};
+
+### Referencing structures
+
+The structure member operator ‘.’ connects the structure name and the member name
+
+	printf (“%d, %d”, point.x, point.y)	// prints out x and y members of struct variable point
+
+	/* if declare a variable of struct rectangle called rect_one 
+	a single member of the sub-struct graph_point can be referenced: */
+	
+	struct rectangle rect_one;
+	rect_one.a.x;
 
 ## Random
 
