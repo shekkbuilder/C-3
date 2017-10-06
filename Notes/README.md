@@ -82,6 +82,9 @@ If you tried to change the value with the statement:
 
 It would not make sense. The statement would mean that the memory address for <b>pointer_var</b> is 10.
 
+<b>&</b> references the address of the value (means "the address of")
+<b>*</b> references the value stored in the address (means "the value pointed by")
+
 ### Example
 
 Initialize a pointer with another variable's memory address
@@ -98,6 +101,16 @@ Initialize a pointer with another variable's memory address
 	// ptr = 100;  doesn't work; like trying to set the memory address to 100
 
 For those two variables <b>intVar</b> is the value while <b>&intVar</b> is the memory address of the value. <b>*ptrVar</b> is the value while <b>ptrVar</b> is the memory address of the value.
+
+### Dereferencing pointers
+
+One important component of using pointers with structures is the concept of ‘de-referencing’ a pointer.
+
+To ‘de-reference’ we need to ensure we return a value, not the memory address. Use the * de-reference operator to act on the value
+
+	*pointer = 25
+
+The <b>&</b> operator is the reference operator (remember "address of") while <b>*</b> is the dereference operator (remember "value pointed to by").
 
 ## Arrays
 
@@ -250,7 +263,7 @@ Once the structure has been defined a new variable of the structure type can be 
 
 ### Nesting structures
 
-It's also possible to nest structures like using two coordinates to construct a rectangle
+You can nest structures like using two coordinates to construct a rectangle.
 
 	struct rectangle
 	{
@@ -258,6 +271,26 @@ It's also possible to nest structures like using two coordinates to construct a 
 		struct graph_point a;
 		struct graph_point b;
 	};
+
+It is also possible to define a structure which in turn can contain another structure as a member.
+
+	struct structure_one
+	{
+		int i;
+		float f;
+	};
+
+	struct structure_two
+	{
+		char c;
+		struct structure_one my_struct;
+	};
+
+	struct structure_two your_struct;
+
+	your_struct.c = 'J';
+	your_struct.my_struct.i = 4;
+	your_struct.my_struct.f = 3.5;	
 
 ### Referencing structures
 
@@ -279,6 +312,10 @@ Pointers can be created using the structures type then initialized the usual way
 
 	customer_db *cust_pointer;
 	cust_pointer = &single_cust;
+
+If you have an array of structures, you can use a pointer and increment it to step through the individual structures in the array one at a time:
+
+	cust_pointer++;
 
 ### Structure scenario example
 
@@ -317,6 +354,44 @@ Refer to individual members of the structures:
 
 	single_cust.account = 354675;
 	all_cust[10].name = "Brandon";
+
+### Dereferencing structures
+
+If you are using a pointer to a structure when you need to act on a member of the structure, you need to de-reference the pointer to the structure to return or act on the member.
+
+You do this by using the structure de-reference operator <b>-></b>
+
+	*struct_pointer;
+	struct_pointer -> name = "Brandon";
+
+This ‘arrow’ operator allows us to de-reference the pointer to an object with members.
+
+You can also place a pointer in paraenthesis to dereference it as well.
+
+	(*struct_pointer).name = "Brandon";
+
+### Creating custom types
+
+Using the C keyword <b>typedef</b> you can define your own data types and structures.
+
+Here is an exmaple of defining a datatype.
+
+	typedef int inches;	// defines a new datatype inches based on int
+	inches width, height;	// inches type variables
+
+Here is an example of defining a structure then using it.
+
+	typedef struct
+	{
+		int account;
+		int balance;
+		char name[40];
+		char address[80];
+		char phone[15];
+	} customer_db;
+
+	customer_db *cust_pointer;
+	cust_pointer -> name = "Brandon";
 
 ## Random
 
