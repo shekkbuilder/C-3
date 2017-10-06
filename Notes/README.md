@@ -10,9 +10,22 @@
 
 ### How to compile on Windows using Developer Command Prompt
 
-Open Developer Command Prompt for Visual Studio and cd to the directory containing the source file. Enter <b>cl programsource.c</b>
+Open Developer Command Prompt for Visual Studio and cd to the directory containing the source file. 
 
-You can use /out:executable.exe to name the executable file. Otherwise the file name will be the same as the source file.
+Enter <b>cl programsource.c</b>
+
+You can use <b>/out:executable.exe</b> to name the executable file. Otherwise the file name will be the same as the source file.
+
+## Common libraries
+
+<ul>
+	<li>stdio.h: I/O functions</li>
+	<li>string.h: String functions</li>
+	<li>ctype.h: Character functions</li>
+	<li>math.h: Mathematics functions</li>
+	<li>time.h: Time and Date functions</li>
+	<li>stdlib.h: Miscellaneous functions</li>
+</ul>
 
 ## Printing output
 
@@ -258,6 +271,15 @@ The structure member operator ‘.’ connects the structure name and the member
 	struct rectangle rect_one;
 	rect_one.a.x;
 
+### Using structures
+
+The only legal operations we can perform on structures are copying the structure or assigning it as a single unit, passing its address with the unary operator ‘&’ and accessing its members
+
+Pointers can be created using the structures type then initialized the usual way using & to point to the address:
+
+	customer_db *cust_pointer;
+	cust_pointer = &single_cust;
+
 ### Structure scenario example
 
 You run a retail store and want a database of customers. A structure can be used to create a database-like structure for each customer.
@@ -291,8 +313,13 @@ You can also create a structure type variable and populate it's members like pre
 
 	customer_db all_cust = {189654, 800, "Tom Joyner", "462 Ridge Street", "756-536-7485"};
 
+Refer to individual members of the structures:
+
+	single_cust.account = 354675;
+	all_cust[10].name = "Brandon";
+
 ## Random
 
-getchar is a stdio library function that reads a single character from stdin (standard input)
+getchar() is a stdio library function that reads a single character from stdin (standard input).
 
-getchar has no parameters and its sole function is to read the next character as an unsigned char and return its value converted to an integer
+getchar() has no parameters and its sole function is to read the next character as an unsigned char and return its value converted to an integer.
